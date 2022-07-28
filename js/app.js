@@ -9,11 +9,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-    let twoSum = a + b;
-    let string = "The sum of " + a + " and " + b + " is " + twoSum + ".";
-    let result = [twoSum, string];
-    console.log(result);
-    return result;
+  let twoSum = a + b;
+  let string = 'The sum of ' + a + ' and ' + b + ' is ' + twoSum + '.';
+  let result = [twoSum, string];
+  console.log(result);
+  return result;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -32,7 +32,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
   let numTimes = a * b;
-  let string = "The product of " + a + " and " + b + " is " + numTimes + ".";
+  let string = 'The product of ' + a + ' and ' + b + ' is ' + numTimes + '.';
   let result = [numTimes, string];
   console.log(result);
   return result;
@@ -56,14 +56,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  sum();
-  multiply();
-  let string_a = "Third element: " + a + "and" + b + "and" + c + " sum to " + twoSum + ".";
-  let string_b = "Fourth element: The product of " + a + "and" +b + "and" + c + "is" + numTimes + ".";
-  let result_1 = [sum, string_a];
-  let result_2 = [multiply, string_b];
-  console.log(result_1);
-  console.log(result_2);
+  let sumA = sum(a, b)[0];
+  let sumB = sum(sumA, c)[0];
+  let timesA = multiply(a, b)[0];
+  let timesB = multiply(timesA, c)[0];
+  let string_a =  a + 'and' + b + 'and' + c + ' sum to ' + sumB + '.';
+  let string_b =  'The product of ' + a + 'and' + b + 'and' + c + 'is' + timesB + '.';
+  //let result_1 = [sumB, string_a];
+  //let result_2 = [timesB, string_b];
+  let result_3 = [sumB, timesB, string_a, string_b];
+  console.log(result_3);
+  return result_3;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -82,21 +85,27 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
+// let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  // what if i did sum + testArray[2]? Equate that to sumArray?
-let sum
-// documenting what i think the string will output.
-let string_c = var + ',' + var + ',' + var + ' was passed in as an array of numbers, and ' + var + ' is their sum.'; 
-let result_3 = ''
-console.log();
-return result_3;
+  let sum_A = (sumArr[0], sumArr[1]);
+  let sum_B = (sum_A, sumArr[2])[0];
+  let string_c = sumArr[0]+ ',' + sumArr[1] + ',' + sumArr[2] + 'was passed in as an array of numbers, and ' + sum_B + 'is their sum.';
+  let result_4 = [sum_B, string_c];
+  console.log(result_4);
+  return result_4;
 }
 
+// function sumArray(sumArr) { //eslint-disable-line
+//   let sum_3 = 0; 
+//   for (let i = 0; i < testArray.length, i++);
+//   sum_3 += sumArray[i];
+//   let string_c = '2, 3, 4 was passed in as an array of numbers, and '+ sum3 + 'is their sum.';
+//   let result_4 = sum_3
+//   }
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -110,14 +119,10 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
-// Write your code here
+//Write your code here
+
 function multiplyArray(multArr) { //eslint-disable-line
-let var = 
-let var = 
-let string_d = 'The numbers ' + var + ',' + var + ',' + var + ' have a product of ' + var + '.'; 
-let result_4 = ''
-console.log();
-return result_4;
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
