@@ -97,7 +97,7 @@ function sumArray(sumArr) { //eslint-disable-line
 }
 
 // function sumArray(sumArr) { //eslint-disable-line
-//   let sum_3 = 0; 
+//   let sum_3 = 0;
 //   for (let i = 0; i < testArray.length, i++);
 //   sum_3 += sumArray[i];
 //   let string_c = '2, 3, 4 was passed in as an array of numbers, and '+ sum3 + 'is their sum.';
@@ -122,7 +122,12 @@ Test this function by hand in the console to get it working, and when you think 
 //Write your code here
 
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let times_C = multiply(multArr[0], multArr[1]);
+  let times_CD = multiply(times_C, multArr[2])[0];
+  let string_d = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + 'have a product of ' + times_CD + '.';
+  let result_5 = [times_CD, string_d];
+  console.log (result_5);
+  return result_5;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
