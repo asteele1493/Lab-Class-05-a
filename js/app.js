@@ -60,13 +60,13 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let sumB = sum(sumA, c)[0];
   let timesA = multiply(a, b)[0];
   let timesB = multiply(timesA, c)[0];
-  let string_a =  a + 'and' + b + 'and' + c + ' sum to ' + sumB + '.';
-  let string_b =  'The product of ' + a + 'and' + b + 'and' + c + 'is' + timesB + '.';
+  //let string_a = ` ${a} and  ${b}  and  ${c}   sum to   ${sumB}  .`;
+  //let string_b =  `The product of  ${a} and ${b} and ${c} is ${timesB} .`;
   //let result_1 = [sumB, string_a];
   //let result_2 = [timesB, string_b];
-  let result_3 = [sumB, timesB, string_a, string_b];
-  console.log(result_3);
-  return result_3;
+  //let result_3 = [sumB, timesB, string_a, string_b];
+  //console.log(result_3);
+    return [sumB, timesB, `${a} and ${b} and ${c} sum to ${sumB}.`, `The product of ${a} and ${b} and ${c} is ${timesB} .`];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -90,14 +90,14 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   let sum_A = (sumArr[0], sumArr[1]);
   let sum_B = (sum_A, sumArr[2])[0];
-  let string_c = sumArr[0]+ ',' + sumArr[1] + ',' + sumArr[2] + 'was passed in as an array of numbers, and ' + sum_B + 'is their sum.';
+  let string_c = `${sumArr[0]} , ${sumArr[1]} , ${sumArr[2]} was passed in as an array of numbers, and ${sum_B} is their sum.`;
   let result_4 = [sum_B, string_c];
   console.log(result_4);
   return result_4;
 }
 
 // function sumArray(sumArr) { //eslint-disable-line
-//   let sum_3 = 0; 
+//   let sum_3 = 0;
 //   for (let i = 0; i < testArray.length, i++);
 //   sum_3 += sumArray[i];
 //   let string_c = '2, 3, 4 was passed in as an array of numbers, and '+ sum3 + 'is their sum.';
