@@ -12,7 +12,7 @@ function sum(a, b) { //eslint-disable-line
   let twoSum = a + b;
   let string = 'The sum of ' + a + ' and ' + b + ' is ' + twoSum + '.';
   let result = [twoSum, string];
-  console.log(result);
+  //console.log(result);
   return result;
 }
 
@@ -34,7 +34,7 @@ function multiply(a, b) { //eslint-disable-line
   let numTimes = a * b;
   let string = 'The product of ' + a + ' and ' + b + ' is ' + numTimes + '.';
   let result = [numTimes, string];
-  console.log(result);
+  //console.log(result);
   return result;
 }
 
@@ -66,7 +66,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   //let result_2 = [timesB, string_b];
   //let result_3 = [sumB, timesB, string_a, string_b];
   //console.log(result_3);
-    return [sumB, timesB, `${a} and ${b} and ${c} sum to ${sumB}.`, `The product of ${a} and ${b} and ${c} is ${timesB} .`];
+  return [ sumB, timesB, ` a and b and c sum to ${sumB} .` , `The product of ${a} and ${b} and ${c} is ${timesB} .` ];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -91,9 +91,7 @@ function sumArray(sumArr) { //eslint-disable-line
   let sum_A = (sumArr[0], sumArr[1]);
   let sum_B = (sum_A, sumArr[2])[0];
   let string_c = `${sumArr[0]} , ${sumArr[1]} , ${sumArr[2]} was passed in as an array of numbers, and ${sum_B} is their sum.`;
-  let result_4 = [sum_B, string_c];
-  console.log(result_4);
-  return result_4;
+  return [ sum_B, string_c];
 }
 
 // function sumArray(sumArr) { //eslint-disable-line
@@ -119,18 +117,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
-// Write your code here
-// function multiplyArray(multArr) { //eslint-disable-line
-// let var =
-// let var =
-// let string_d = 'The numbers ' + var + ',' + var + ',' + var + ' have a product of ' + var + '.';
-// let result_4 = ''
-// console.log();
-// return result_4;
-// }
+//Write your code here
+function multiplyArray(multArr) { //eslint-disable-line
+  let productA = multiply(multArr(0), multArr(1))[0];
+  let productB = multiply(productA, multArr(2))[0];
+  let string_d = 'The numbers ${multArr[0]}, ${multArr[1]}, and ${multArr[2]} have a product of ${productB}';
+  return [productB, string_d];
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -151,11 +147,11 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+// let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
+// }
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
