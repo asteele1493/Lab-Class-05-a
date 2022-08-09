@@ -45,7 +45,9 @@ testMultiply(5,9);
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
+Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array 
+where the first element is the sum of those three numbers, the second element is the product of those three numbers,  
+and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
@@ -60,13 +62,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let sumB = sum(sumA, c)[0];
   let timesA = multiply(a, b)[0];
   let timesB = multiply(timesA, c)[0];
-  //let string_a = ` ${a} and  ${b}  and  ${c}   sum to   ${sumB}  .`;
-  //let string_b =  `The product of  ${a} and ${b} and ${c} is ${timesB} .`;
-  //let result_1 = [sumB, string_a];
-  //let result_2 = [timesB, string_b];
-  //let result_3 = [sumB, timesB, string_a, string_b];
-  //console.log(result_3);
-  return [ sumB, timesB, ` a and b and c sum to ${sumB} .` , `The product of ${a} and ${b} and ${c} is ${timesB} .` ];
+  return [sumB, timesB, ` ${a} and ${b} and ${c} sum to ${sumB} .` , `The product of ${a} and ${b} and ${c} is ${timesB} .` ];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -88,8 +84,8 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let sum_A = (sumArr[0], sumArr[1]);
-  let sum_B = (sum_A, sumArr[2])[0];
+  let sum_A = sum(sumArr[0], sumArr[1])[0];
+  let sum_B = sum(sum_A, sumArr[2])[0];
   let string_c = `${sumArr[0]} , ${sumArr[1]} , ${sumArr[2]} was passed in as an array of numbers, and ${sum_B} is their sum.`;
   return [ sum_B, string_c];
 }
@@ -119,11 +115,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 //Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  let productA = multiply(multArr(0), multArr(1))[0];
-  let productB = multiply(productA, multArr(2))[0];
-  let string_d = 'The numbers ${multArr[0]}, ${multArr[1]}, and ${multArr[2]} have a product of ${productB}';
+  let productA = multiply(multArr[0], multArr[1])[0];
+  let productB = multiply(productA, multArr[2])[0];
+  let string_d = 'The numbers ${multArr[0]}, ${multArr[1]}, ${multArr[2]} have a product of ${productB}';
   return [productB, string_d];
 }
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
