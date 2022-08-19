@@ -34,7 +34,6 @@ function multiply(a, b) { //eslint-disable-line
   let numTimes = a * b;
   let string = 'The product of ' + a + ' and ' + b + ' is ' + numTimes + '.';
   let result = [numTimes, string];
-  //console.log(result);
   return result;
 }
 
@@ -45,8 +44,8 @@ testMultiply(5,9);
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array 
-where the first element is the sum of those three numbers, the second element is the product of those three numbers,  
+Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array
+where the first element is the sum of those three numbers, the second element is the product of those three numbers,
 and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
@@ -60,9 +59,14 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   let sumA = sum(a, b)[0];
   let sumB = sum(sumA, c)[0];
+
+  //let stringSum = ` ${a} and ${b} and ${c} sum to ${sumB} .`;
+
   let timesA = multiply(a, b)[0];
   let timesB = multiply(timesA, c)[0];
-  return [sumB, timesB, ` ${a} and ${b} and ${c} sum to ${sumB} .` , `The product of ${a} and ${b} and ${c} is ${timesB} .` ];
+
+  //let stringsAndMultiply = `The product of ${a} and ${b} and ${c} is ${timesB}.`;
+  return [sumB, timesB, `${a} and ${b} and ${c} sum to ${sumB}.`, `The product of ${a} and ${b} and ${c} is ${timesB}.`];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -72,7 +76,9 @@ testSumAndMultiply(4,7,5);
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called sumArray() that takes in an array of numbers as its single argument and then returns
+an array where the first element is the sum of the numbers in the array, and the second element is a string that
+EXACTLY follows this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
@@ -86,8 +92,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   let sum_A = sum(sumArr[0], sumArr[1])[0];
   let sum_B = sum(sum_A, sumArr[2])[0];
-  let string_c = `${sumArr[0]} , ${sumArr[1]} , ${sumArr[2]} was passed in as an array of numbers, and ${sum_B} is their sum.`;
-  return [ sum_B, string_c];
+  return [ sum_B, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum_B} is their sum.`];
 }
 
 // function sumArray(sumArr) { //eslint-disable-line
@@ -105,20 +110,25 @@ testSumArray(testArray);
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiplyArray() that takes an array of numbers as its argument and returns
+an array whose first element is the product of those numbers, and the second element is a string that EXACTLY
+follows this example and uses the values that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication,
+use your multiply() function that you've already created. You're going to have to be resourceful to figure out
+how to do this. This function should handle an array containing three elements.
+However, you may continue to use the + operator for string concatenation.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished,
+ uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 //Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
   let productA = multiply(multArr[0], multArr[1])[0];
   let productB = multiply(productA, multArr[2])[0];
-  let string_d = 'The numbers ${multArr[0]}, ${multArr[1]}, ${multArr[2]} have a product of ${productB}';
-  return [productB, string_d];
+  return [productB, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of 24.`];
 }
 
 
